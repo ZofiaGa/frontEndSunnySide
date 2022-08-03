@@ -1,0 +1,267 @@
+@use "../sub_files/" as *;
+
+.transform-outer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stand-out-outer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.transform,
+.stand-out {
+  height: 433px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.egg-img {
+  width: 100%;
+}
+
+.stand-out-img {
+  width: 100%;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 365px;
+}
+
+.transform-h1,
+.stand-out-h1 {
+  font-family: $fontFraunces;
+  color: $transfromH1Color;
+  font-size: 32px;
+  margin: 0 22px;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: -0.23px;
+}
+
+.transform-p,
+.stand-out-p {
+  font-family: $fontBarlow;
+  color: $transformPColor;
+  margin: 0 22px;
+  padding: 0 3px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 18px;
+  letter-spacing: -0.13px;
+  margin-top: 23px;
+  margin-bottom: 35px;
+  font-weight: 500;
+}
+
+.transform-link,
+.stand-out-link {
+  position: relative;
+
+  div {
+    width: 137px;
+    height: 10px;
+    border-radius: 25px;
+  }
+
+  :nth-child(2) {
+    margin-top: 15px;
+    margin-left: 0px;
+  }
+
+  button::after {
+    transition: 0.3s;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+.transform-link {
+  button {
+    font-family: $fontFraunces;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 0 7px;
+  }
+
+  button:after {
+    content: "";
+    position: absolute;
+    top: 11.5px;
+    left: 0px;
+    right: 0px;
+    border-bottom: $transformLinkBeforeHoverUnderline;
+    border-radius: 100px;
+    z-index: -10;
+  }
+
+  button:hover:after {
+    border-bottom: $transformLinkHoverUnderline;
+  }
+}
+
+.stand-out-link {
+  button {
+    font-family: $fontFraunces;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 0 7px;
+  }
+
+  button:after {
+    content: "";
+    position: absolute;
+    top: 11.5px;
+    left: 0px;
+    right: 0px;
+    border-bottom: $standOutLinkBeforeHoverUnderline;
+    border-radius: 100px;
+
+    z-index: -10;
+  }
+
+  button:hover:after {
+    border-bottom: $standOutLinkHoverUnderline;
+  }
+}
+
+
+@media (min-width: 550px) {
+  .transform,
+  .stand-out {
+    max-height: 400px;
+  }
+  .transform-outer-container,
+  .stand-out-outer-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    :first-child {
+      grid-column: 1 / -1;
+      grid-row: 1 / span 1;
+    }
+    :last-child {
+      grid-column: 1 / -1;
+      grid-row: 1 / span 1;
+      place-self: center;
+
+      .inner-container {
+        background-color: $transformStandOutInnerContainerMedia550BackgroundColor;
+        padding: 20px 0px;
+      }
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .transform-outer-container {
+    grid-template-columns: 1fr 1fr;
+
+    .egg-img {
+      min-width: 256px;
+      min-height: 433px;
+      object-fit: cover;
+      object-position: 55%;
+      grid-column: 2 / span 1;
+    }
+
+    .transform {
+      grid-row: 1 / 2;
+      place-self: center;
+      grid-column: 1 / span 1;
+
+      .inner-container {
+        background-color: transparent;
+
+        p {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .stand-out-outer-container {
+    grid-template-columns: 1fr 1fr;
+
+    .stand-out-img {
+      grid-column: 1 / span 1;
+
+      min-width: 256px;
+      min-height: 433px;
+      object-fit: cover;
+      object-position: 47%;
+    }
+
+    .stand-out {
+      place-self: center;
+      grid-column: 2 / span 1;
+
+      .inner-container {
+        background-color: transparent;
+
+        p {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  div.transform,
+  div.stand-out {
+    max-height: 600px;
+    max-width: 720px;
+    display: flex;
+    justify-content: center;
+
+    .inner-container {
+      max-width: 445px;
+      max-height: 285px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .transform-link {
+        align-self: flex-start;
+      }
+      .stand-out-link {
+        align-self: flex-start;
+      }
+
+      h1,
+      p {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      h1 {
+        font-size: 40px;
+        font-weight: 900;
+      }
+
+      p {
+        font-weight: 500;
+        letter-spacing: -0.13px;
+      }
+    }
+  }
+}
+
+

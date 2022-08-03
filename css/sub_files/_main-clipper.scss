@@ -1,0 +1,27 @@
+
+.clipper {
+
+    min-height: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(187px, 1fr));
+
+  
+    img {
+      width: 100%;
+
+    }
+    picture {
+      display: block;
+      line-height: 0;
+    }
+  }
+
+  @media (min-width: 650px) {
+
+
+    .clipper {
+      max-width: 1440px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+  }

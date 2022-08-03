@@ -1,0 +1,119 @@
+@use "../sub_files/" as *;
+
+.hamburger {
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 109px 24px;
+
+  min-width: 329px;
+  height: 305px; // 329 - 24
+  background: white;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  li {
+    display: inline-block;
+
+    a {
+      text-decoration: none;
+
+      display: inline-block;
+      width: 140px;
+      font-weight: 600;
+      text-align: center;
+      padding: 12px 0;
+      color: $bubbleGeneralTextColor;
+      font-size: 20px;
+      border-radius: 50px;
+      font-family: $fontBarlow;
+    }
+  }
+
+  li:nth-of-type(2) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  li:nth-of-type(4) {
+    margin-top: 19.5px;
+    margin-bottom: 39px;
+    a {
+      padding: 18.5px 0;
+      font-weight: 800;
+      background-color: $bubbleMenuContactBackgroundColor;
+      text-transform: uppercase;
+      font-family: $fontFraunces;
+      font-size: 15px;
+      color: $bubbleBubbleMenuContactTextColor;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    border-bottom: 24px solid $bubbleMenuBackgroundColor;
+    border-left: 24px solid transparent;
+    top: -24px;
+    right: 0;
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@media (min-width: 900px) {
+  .menu {
+    position: relative;
+    flex-direction: row;
+
+    margin: 32px 49px;
+    padding: 0 0;
+    height: 56px;
+    background-color: transparent;
+    color: white;
+
+    li {
+      a {
+        padding: 18.5px 0;
+
+        width: 117px;
+        color: white;
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      &:nth-of-type(4) {
+        a {
+          margin-left: 10px;
+          margin-top: 20px;
+          background-color: white;
+          width: 140px;
+          transition: 0.3s;
+        }
+
+        a:hover {
+          background-color: rgba(255, 255, 255, 0.3);
+          color: white;
+          font-weight: 500;
+        }
+      }
+    }
+
+    &:before {
+      content: none;
+    }
+  }
+
+  nav .hamburger {
+    display: none;
+  }
+}

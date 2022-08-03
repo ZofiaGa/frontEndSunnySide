@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&display=swap");
+
+//FONTS
+$fontBarlow: "Barlow", sans-serif;
+$fontFraunces: "Fraunces", serif;
+
+// HEADER
+$logoColor: #fff;
+$navbarContactColor: #24303e;
+$headerTitleColor: #fff;
+$headerBackgroundImg: url("/images/image-header.jpg"); // this URL works with Live Server
+// but the following path works with the website opening with index.html
+// file:///C:/Users/Zofia/Desktop/JS/sunnyside%20agency%20landing%20page/for%20github%20repo/images/image-header.jpg
+$headerBackgroundColor: #3dbeff;
+
+// BUBBLE MENU
+$bubbleMenuBackgroundColor: #fff;
+$bubbleMenuContactBackgroundColor: #fbd600;
+$bubbleGeneralTextColor: #808397;
+$bubbleBubbleMenuContactTextColor: #24303e;
+
+// MENU
+$menuDesktopColor: #fff;
+$contactDesktopBackgroundColor: #fff;
+$contactDesktopColor: #24303e;
+
+// TRANSFORM, STAND OUT
+$transfromH1Color: #24303e;
+$transformPColor: #808397;
+$transformLinkBeforeHoverUnderline: 10px solid rgba(250, 212, 0, 0.3);
+$transformLinkHoverUnderline: 10px solid #fad400;
+
+$standOutLinkBeforeHoverUnderline: 10px solid rgba(254, 120, 102, 0.3);
+$standOutLinkHoverUnderline: 10px solid #fe7766;
+
+$transformStandOutInnerContainerMedia550BackgroundColor: rgba(
+  255,
+  255,
+  255,
+  0.75
+);
+
+// GRAPHIC
+$graphicDesignBackgroundImg: url("/images/image-graphic-design.jpg");
+$designTitleAndPColor: #24554aee;
+
+// PHOTOPRAHPY
+$photographyBackgroundImg: url("/images/image-photography.jpg");
+$photographyTitleAndPColor: #052c3bbb;
+
+// TESTIMONIALS
+$testimonialsPColor: #5b636d;
+$testimonialsTitleColor: #a7aaad;
+$testimonialsH2Color: #a7aaad;
+
+// FOOTER
+$footerBackgroundColor: #90d4c6;
+$footerH2Color: #2c7566;
+$footerSocialColor: #90d4c6;
+$footerNavColor: #458d7e;
+$footerHoverColor: #fff;

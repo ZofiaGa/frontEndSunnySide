@@ -1,0 +1,66 @@
+@use "../sub_files/" as *;
+
+div.graphic-design {
+  background-image: $graphicDesignBackgroundImg;
+}
+
+div.photography {
+  background-image: $photographyBackgroundImg;
+}
+
+div.graphic-design,
+div.photography {
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.design-title,
+.design-p {
+  color: $designTitleAndPColor;
+}
+
+.photography-title,
+.photography-p {
+  color: $photographyTitleAndPColor;
+}
+
+.design-title,
+.photography-title {
+  font-family: $fontFraunces;
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: capitalize;
+  letter-spacing: -0.2px;
+  margin-bottom: 30px;
+}
+
+.design-p,
+.photography-p {
+  font-weight: 700;
+  max-width: 350px;
+  margin: 0 22px;
+  height: 81px;
+  font-family: $fontBarlow;
+  font-size: 16px;
+  letter-spacing: -0.11px;
+  line-height: 27px;
+  text-align: center;
+  margin-bottom: 58px;
+}
+
+@media (min-width: 700px) {
+  .graphic-photo-outer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .design-p,
+  .photography-p {
+    max-width: 350px;
+  }
+}
