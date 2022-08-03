@@ -141,8 +141,8 @@ header .logo-and-menu .hamburger {
   right: 24px;
 }
 header .header-title-and-arrow {
-/*   background: url("/images/image-header.jpg"); */
-    background: url("file:///C:/Users/Zofia/Desktop/JS/sunnyside%20agency%20landing%20page/for%20github%20repo/images/image-header.jpg");
+  background: url("/images/image-header.jpg");
+
   
   background-size: 750px;
   background-position: bottom;
