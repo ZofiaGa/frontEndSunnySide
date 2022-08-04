@@ -481,11 +481,11 @@ div.stand-out .inner-container p {
   }
 }
 div.graphic-design {
-  background-image: url("/images/image-graphic-design.jpg");
+  background-image: url("https://raw.githubusercontent.com/ZofiaGa/frontEndSunnySide/main/images/image-graphic-design.jpg");
 }
 
 div.photography {
-  background-image: url("/images/image-photography.jpg");
+  background-image: url("https://raw.githubusercontent.com/ZofiaGa/frontEndSunnySide/main/images/image-photography.jpg");
 }
 
 div.graphic-design,
