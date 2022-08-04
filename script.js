@@ -59,7 +59,7 @@ window.addEventListener("resize", (e) => {
     headerAndArrow.classList.remove("hidden");
     menu.style.zIndex = "10";
   } else {
-    // menu.classList.add("hidden");
+    menu.classList.add("hidden");
     headerAndArrow.classList.remove("hidden");
     menu.style.zIndex = "-10";
   }
