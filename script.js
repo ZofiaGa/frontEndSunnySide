@@ -45,6 +45,7 @@ btnScroll.addEventListener("click", function (e) {
   }
 });
 
+
 window.addEventListener("resize", (e) => {
   let media = mediaQuery900.matches;
 
