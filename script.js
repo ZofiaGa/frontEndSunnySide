@@ -48,13 +48,12 @@ btnScroll.addEventListener("click", function (e) {
 window.addEventListener("resize", (e) => {
   let media = mediaQuery900.matches;
 
-  if (e.target.innerWidth >= 900) {
+
+  if (mediaQuery900.matches) {
     if (menu.classList.value === "menu hidden") {
       menu.classList.remove("hidden");
       media = true;
     }
-  }
-  if (mediaQuery900.matches) {
     menu.classList.remove("hidden");
     headerAndArrow.classList.remove("hidden");
     menu.style.zIndex = "10";
