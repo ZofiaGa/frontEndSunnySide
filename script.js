@@ -31,7 +31,7 @@ hamburger.addEventListener("click", function () {
   if (menu.classList.value === "menu hidden") {
     menu.style.zIndex = "-10";
   } else {
-    menu.style.zIndex = "0";
+    menu.style.zIndex = "10";
   }
 });
 
